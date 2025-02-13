@@ -11,8 +11,8 @@
       enable = true;
       environmentFile = config.sops.secrets.wireless.path;
       networks = {
-        "@home_uuid@" = {
-          psk = "@home_psk@";
+        "ext:uuid" = {
+          psk = "ext:password";
         };
       };
     };

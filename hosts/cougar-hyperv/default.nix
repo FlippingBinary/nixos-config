@@ -23,12 +23,6 @@
         encrypted = true;
         rootDataset = "rpool/local/root";
       };
-      wireless = {
-        enable = false;
-      };
-      # routing = {
-      #   enable = false;
-      # };
     };
     graphical = {
       enable = true;
