@@ -36,24 +36,12 @@
       { pkgs, ... }:
       {
         catppuccin = {
-          yazi = {
-            enable = true;
-          };
-          starship = {
-            enable = true;
-          };
-          lazygit = {
-            enable = true;
-          };
-          fzf = {
-            enable = true;
-          };
-          bottom = {
-            enable = true;
-          };
-          bat = {
-            enable = true;
-          };
+          yazi.enable = true;
+          starship.enable = true;
+          lazygit.enable = true;
+          fzf.enable = true;
+          bottom.enable = true;
+          bat.enable = true;
           pointerCursor = {
             enable = true;
             accent = "dark";
