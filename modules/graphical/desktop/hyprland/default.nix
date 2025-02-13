@@ -38,14 +38,6 @@
               SessionDir = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/share/wayland-sessions";
             };
           };
-          catppuccin = {
-            enable = true;
-            assertQt6Sddm = true;
-            flavor = "macchiato";
-            font = "0xProto Nerd Font";
-            fontSize = "12";
-            loginBackground = true;
-          };
         };
       };
     };
@@ -67,7 +59,6 @@
         ## Took some stuff from the end4 dots config @ https://github.com/end-4/dots-hyprland/blob/main/.config/hypr/hyprland/general.conf
         wayland.windowManager.hyprland = {
           enable = true;
-          catppuccin.enable = true;
           xwayland = {
             enable = true;
           };

@@ -4,7 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    nur.url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Flakes
     home-manager.url = "github:nix-community/home-manager";
@@ -78,31 +81,12 @@
       ];
 
       sharedModules = [
-        (
-          {
-            inputs,
-            outputs,
-            lib,
-            config,
-            pkgs,
-            ...
-          }:
-          {
-            nixpkgs = {
-              overlays = [
-                nur.overlay
-                (import ./overlays { inherit inputs; }).stable-packages
-              ];
-            };
-          }
-        )
-
+        nur.modules.nixos.default
         sops-nix.nixosModules.sops
         impermanence.nixosModule
         home-manager.nixosModule
         catppuccin.nixosModules.catppuccin
         nixos-wsl.nixosModules.default
-        nur.nixosModules.nur
 
         ./modules
       ];
@@ -144,6 +128,12 @@
             inherit inputs outputs;
           };
           modules = wslModules ++ [ ./hosts/thinkpad-nix/default.nix ];
+        };
+        cougar-hyperv = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs;
+          };
+          modules = sharedModules ++ [ ./hosts/cougar-hyperv/default.nix ];
         };
         cougar-nix = nixpkgs.lib.nixosSystem {
           specialArgs = {

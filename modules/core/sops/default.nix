@@ -22,10 +22,6 @@ _: {
 
       wireless = {};
 
-      "authorized_keys/root" = {
-        path = "/root/.ssh/authorized_keys";
-      };
-
       "authorized_keys/jon" = {
         path = "/home/jon/.ssh/authorized_keys";
         owner = "jon";

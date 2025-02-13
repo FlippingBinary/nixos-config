@@ -26,7 +26,7 @@
         };
       };
       packages = with pkgs; [
-        (nerdfonts.override { fonts = [ "0xProto" ]; })
+	nerd-fonts._0xproto
       ];
     };
 
@@ -47,6 +47,26 @@
             accent = "dark";
             flavor = "macchiato";
           };
+	  gtk = {
+            flavor = "macchiato";
+            accent = "peach";
+            size = "compact";
+            #icon = {
+            #  enable = true;
+            #  flavor = "macchiato";
+            #  accent = "peach";
+            #};
+	  };
+	  hyprland.enable = true;
+	  kitty.enable = true;
+          sddm = {
+            assertQt6Sddm = true;
+            loginBackground = true;
+            fontSize = "12";
+            font = "0xProto Nerd Font";
+            flavor = "macchiato";
+            enable = true;
+          };
         };
 
         gtk = {
@@ -57,17 +77,6 @@
           font = {
             name = "0xProto Nerd Font";
             size = 10;
-          };
-
-          catppuccin = {
-            flavor = "macchiato";
-            accent = "peach";
-            size = "compact";
-            #icon = {
-            #  enable = true;
-            #  flavor = "macchiato";
-            #  accent = "peach";
-            #};
           };
         };
 

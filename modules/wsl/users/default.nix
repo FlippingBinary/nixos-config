@@ -5,7 +5,7 @@ _: {
       jon = {
         isNormalUser = true;
         home = "/home/jon";
-        extraGroups = [ "systemd-journal" ];
+        extraGroups = [ "systemd-journal", "wheel" ];
       };
       fwupd-refresh = {
         isSystemUser = true;
