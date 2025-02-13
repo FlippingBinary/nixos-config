@@ -21,11 +21,6 @@ _: {
       };
 
       wireless = {};
-
-      "authorized_keys/jon" = {
-        path = "/home/jon/.ssh/authorized_keys";
-        owner = "jon";
-      };
     };
   };
 }
