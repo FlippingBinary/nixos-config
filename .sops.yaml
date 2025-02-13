@@ -1,0 +1,9 @@
+keys:
+  - &jon age1zls7wwkvw4j9t588drwn5wfw7usgf6edctq2v9dg2avcwgppndhqj3lj2g
+  - &host_cougar age1j69w6sv7h7807kyupawek7z2aqeuf7zahky9lec79uw83rs825mq9detw6
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *jon
+          - *host_cougar
