@@ -42,7 +42,7 @@
           fzf.enable = true;
           bottom.enable = true;
           bat.enable = true;
-          pointerCursor = {
+          cursors = {
             enable = true;
             accent = "dark";
             flavor = "macchiato";
@@ -59,14 +59,6 @@
 	  };
 	  hyprland.enable = true;
 	  kitty.enable = true;
-          sddm = {
-            assertQt6Sddm = true;
-            loginBackground = true;
-            fontSize = "12";
-            font = "0xProto Nerd Font";
-            flavor = "macchiato";
-            enable = true;
-          };
         };
 
         gtk = {

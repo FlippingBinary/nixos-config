@@ -25,6 +25,14 @@
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-macchiato;
   catppuccin = {
     flavor = "macchiato";
+    sddm = {
+      assertQt6Sddm = true;
+      loginBackground = true;
+      fontSize = "12";
+      font = "0xProto Nerd Font";
+      flavor = "macchiato";
+      enable = true;
+    };
   };
 
   home-manager = {
