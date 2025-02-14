@@ -37,7 +37,7 @@
             gpg.format = "ssh";
 
             github.user = "FlippingBinary";
-            safe.directory = "/home/jon/projects/personal/github/nixos-config";
+            safe.directory = "/home/jon/projects/nixos-config";
           };
         };
       };
