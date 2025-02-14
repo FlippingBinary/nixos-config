@@ -1,5 +1,6 @@
 keys:
   - &jon age1zls7wwkvw4j9t588drwn5wfw7usgf6edctq2v9dg2avcwgppndhqj3lj2g
+  - &jon_cougar_nix age1qu52gcxrdp3trj9rz07runtttmf2cs8fjutf09ht2gcf4ksuk96qlyrhm5
   - &jon_thinkpad_nix age1n6pt9ssfqtlk55esrmlde005dspnlphxqpwvc0jylg3hgdl2fq4stgdyps
   - &host_cougar age1j69w6sv7h7807kyupawek7z2aqeuf7zahky9lec79uw83rs825mq9detw6
 creation_rules:
@@ -7,5 +8,6 @@ creation_rules:
     key_groups:
       - age:
           - *jon
+          - *jon_cougar_nix
           - *jon_thinkpad_nix
           - *host_cougar
