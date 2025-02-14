@@ -35,7 +35,6 @@
 
     nix = {
       settings = {
-        auto-optimize-store = true;
         trusted-users = [
           "jon"
         ];
