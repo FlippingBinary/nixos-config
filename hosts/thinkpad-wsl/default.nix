@@ -15,8 +15,8 @@
   };
 
   networking = {
-    hostName = "cougar-nix";
-    hostId = "67b9f357";
+    hostName = "thinkpad-wsl";
+    hostId = "765aac61";
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

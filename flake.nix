@@ -123,11 +123,11 @@
       overlays = import ./overlays { inherit inputs; };
 
       nixosConfigurations = {
-        thinkpad-nix = nixpkgs.lib.nixosSystem {
+        thinkpad-wsl = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs outputs;
           };
-          modules = wslModules ++ [ ./hosts/thinkpad-nix/default.nix ];
+          modules = wslModules ++ [ ./hosts/thinkpad-wsl/default.nix ];
         };
         cougar-hyperv = nixpkgs.lib.nixosSystem {
           specialArgs = {
@@ -135,11 +135,11 @@
           };
           modules = sharedModules ++ [ ./hosts/cougar-hyperv/default.nix ];
         };
-        cougar-nix = nixpkgs.lib.nixosSystem {
+        cougar-wsl = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs outputs;
           };
-          modules = wslModules ++ [ ./hosts/cougar-nix/default.nix ];
+          modules = wslModules ++ [ ./hosts/cougar-wsl/default.nix ];
         };
       };
     };
