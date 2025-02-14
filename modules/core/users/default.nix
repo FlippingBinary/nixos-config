@@ -1,4 +1,5 @@
-{config, pkgs, ...}: {
+{ config, ... }:
+{
   config = {
     users = {
       mutableUsers = false;
@@ -6,7 +7,7 @@
         jon = {
           isNormalUser = true;
           home = "/home/jon";
-          extraGroups = ["systemd-journal"];
+          extraGroups = [ "systemd-journal" ];
           hashedPasswordFile = config.sops.secrets."users/jon".path;
         };
         root.hashedPasswordFile = config.sops.secrets."users/root".path;
