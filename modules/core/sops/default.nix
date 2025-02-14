@@ -6,7 +6,7 @@ _: {
     age = {
       keyFile = "/home/jon/.config/sops/age/keys.txt";
       sshKeyPaths = [
-        "/data/etc/ssh/ssh_host_ed25519_key"
+        "/etc/ssh/ssh_host_ed25519_key"
       ];
       generateKey = true;
     };
@@ -20,7 +20,7 @@ _: {
         neededForUsers = true;
       };
 
-      wireless = {};
+      wireless = { };
     };
   };
 }
