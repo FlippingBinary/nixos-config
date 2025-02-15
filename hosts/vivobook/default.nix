@@ -4,7 +4,7 @@
 
   networking = {
     hostName = "vivobook";
-    hostId = "";
+    hostId = "535be364";
     nameservers = [
       "10.1.1.1"
       "1.1.1.1"
