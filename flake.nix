@@ -141,6 +141,12 @@
           };
           modules = wslModules ++ [ ./hosts/cougar-wsl/default.nix ];
         };
+        vivobook = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs;
+          };
+          modules = sharedModules ++ [ ./hosts/vivobook/default.nix ];
+        };
       };
     };
 }
